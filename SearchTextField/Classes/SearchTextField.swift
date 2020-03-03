@@ -86,8 +86,8 @@ open class SearchTextField: UITextField {
     
     /// Start showing the default loading indicator, useful for searches that take some time.
     open func showLoadingIndicator() {
-        self.rightViewMode = .always
-        indicator.startAnimating()
+//        self.rightViewMode = .always
+//        indicator.startAnimating()
     }
     
     /// Force the results list to adapt to RTL languages
@@ -95,8 +95,8 @@ open class SearchTextField: UITextField {
     
     /// Hide the default loading indicator
     open func stopLoadingIndicator() {
-        self.rightViewMode = .never
-        indicator.stopAnimating()
+//        self.rightViewMode = .never
+//        indicator.stopAnimating()
     }
     
     /// When InlineMode is true, the suggestions appear in the same line than the entered string. It's useful for email domains suggestion for example.
@@ -144,7 +144,7 @@ open class SearchTextField: UITextField {
     fileprivate var timer: Timer? = nil
     fileprivate var placeholderLabel: UILabel?
     fileprivate static let cellIdentifier = "APSearchTextFieldCell"
-    fileprivate let indicator = UIActivityIndicatorView(style: .gray)
+//    fileprivate let indicator = UIActivityIndicatorView(style: .gray)
     fileprivate var maxTableViewSize: CGFloat = 0
     
     fileprivate var filteredResults = [SearchTextFieldItem]()
@@ -193,8 +193,8 @@ open class SearchTextField: UITextField {
         }
         
         // Create the loading indicator
-        indicator.hidesWhenStopped = true
-        self.rightView = indicator
+//        indicator.hidesWhenStopped = true
+//        self.rightView = indicator
     }
     
     override open func rightViewRect(forBounds bounds: CGRect) -> CGRect {
