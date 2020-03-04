@@ -197,11 +197,17 @@ open class SearchTextField: UITextField {
 //        self.rightView = indicator
     }
     
-    override open func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-        var rightFrame = super.rightViewRect(forBounds: bounds)
-        rightFrame.origin.x -= 5
-        return rightFrame
-    }
+        override open func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+            var rightFrame = super.rightViewRect(forBounds: bounds)
+            rightFrame.origin.x -= 10
+            return rightFrame
+        }
+        
+        override open func leftViewRect(forBounds bounds: CGRect) -> CGRect {
+            var leftFrame = super.leftViewRect(forBounds: bounds)
+            leftFrame.origin.x += 10
+            return leftFrame
+        }
     
     // Create the filter table and shadow view
     fileprivate func buildSearchTableView() {
