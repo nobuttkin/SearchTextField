@@ -256,7 +256,7 @@ open class SearchTextField: UITextField {
         } else {
             placeholderLabel = UILabel(frame: newRect)
             placeholderLabel?.font = self.font
-            placeholderLabel?.backgroundColor = UIColor.clear
+            placeholderLabel?.backgroundColor = UIColor.white
             placeholderLabel?.lineBreakMode = .byClipping
             
             if let placeholderColor = self.attributedPlaceholder?.attribute(NSAttributedString.Key.foregroundColor, at: 0, effectiveRange: nil) as? UIColor {
@@ -577,7 +577,7 @@ extension SearchTextField: UITableViewDelegate, UITableViewDataSource {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: SearchTextField.cellIdentifier)
         }
         
-        cell!.backgroundColor = UIColor.clear
+        cell!.backgroundColor = UIColor.white
         cell!.layoutMargins = UIEdgeInsets.zero
         cell!.preservesSuperviewLayoutMargins = false
         cell!.textLabel?.font = theme.font
